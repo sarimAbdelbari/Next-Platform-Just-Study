@@ -1,15 +1,19 @@
-// data.ts
-import {
-  BookOpen,
-  Bot,
-  Frame,
-  LifeBuoy,
-  Map,
-  PieChart,
-  Send,
-  Settings2,
-  SquareTerminal,
-} from "lucide-react"
+"use client";
+import { 
+  AudioWaveform, 
+  Command, 
+  GalleryVerticalEnd, 
+  LayoutDashboard, 
+  CheckSquare as IconChecklist, 
+  Package as IconPackages, 
+  Settings as IconSettings, 
+  UserCog as IconUserCog, 
+  Wrench as IconTool, 
+  Palette as IconPalette, 
+  Bell as IconNotification, 
+  MonitorCheck as IconBrowserCheck, 
+  HelpCircle as IconHelp 
+} from "lucide-react";
 
 export const data = {
   user: {
@@ -17,120 +21,84 @@ export const data = {
     email: "m@example.com",
     avatar: "/avatars/shadcn.jpg",
   },
-  navMain: [
+  teams: [
     {
-      title: "Playground",
-      url: "#",
-      icon: SquareTerminal,
-      isActive: true,
+      name: "Acme Inc",
+      logo: GalleryVerticalEnd,
+      plan: "Enterprise",
+    },
+    {
+      name: "Acme Corp.",
+      logo: AudioWaveform,
+      plan: "Startup",
+    },
+    {
+      name: "Evil Corp.",
+      logo: Command,
+      plan: "Free",
+    },
+  ],
+  navGroups: [
+    {
+      title: 'General',
       items: [
         {
-          title: "History",
-          url: "#",
+          title: 'Dashboard',
+          url: '/',
+          icon: LayoutDashboard,
         },
         {
-          title: "Starred",
-          url: "#",
+          title: 'Users',
+          url: '/tasks',
+          icon: IconChecklist,
         },
         {
-          title: "Settings",
-          url: "#",
+          title: 'Logs',
+          url: '/apps',
+          icon: IconPackages,
         },
       ],
     },
     {
-      title: "Models",
-      url: "#",
-      icon: Bot,
+      title: 'Other',
       items: [
         {
-          title: "Genesis",
-          url: "#",
+          title: 'Settings',
+          icon: IconSettings,
+          items: [
+            {
+              title: 'Profile',
+              url: '/settings',
+              icon: IconUserCog,
+            },
+            {
+              title: 'Account',
+              url: '/settings/account',
+              icon: IconTool,
+            },
+            {
+              title: 'Appearance',
+              url: '/settings/appearance',
+              icon: IconPalette,
+            },
+            {
+              title: 'Notifications',
+              url: '/settings/notifications',
+              icon: IconNotification,
+            },
+            {
+              title: 'Display',
+              url: '/settings/display',
+              icon: IconBrowserCheck,
+            },
+          ],
         },
         {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Documentation",
-      url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Settings",
-      url: "#",
-      icon: Settings2,
-      items: [
-        {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
+          title: 'Help Center',
+          url: '/help-center',
+          icon: IconHelp,
         },
       ],
     },
   ],
-  navSecondary: [
-    {
-      title: "Support",
-      url: "#",
-      icon: LifeBuoy,
-    },
-    {
-      title: "Feedback",
-      url: "#",
-      icon: Send,
-    },
-  ],
-  projects: [
-    {
-      name: "Design Engineering",
-      url: "#",
-      icon: Frame,
-    },
-    {
-      name: "Sales & Marketing",
-      url: "#",
-      icon: PieChart,
-    },
-    {
-      name: "Travel",
-      url: "#",
-      icon: Map,
-    },
-  ],
-}
+};

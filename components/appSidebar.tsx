@@ -1,4 +1,3 @@
-import { Command } from "lucide-react";
 import { NavMain } from "@/components/navMain";
 import { NavProjects } from "@/components/navProjects";
 import { NavSecondary } from "@/components/navSecondary";
@@ -13,6 +12,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { auth } from "@/lib/auth";
+import Image from "next/image";
 
 export async function AppSidebar({...props }) {
   
@@ -34,7 +34,7 @@ export async function AppSidebar({...props }) {
             <SidebarMenuButton size="lg" asChild>
               <a href="#">
                 <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                  <Command className="size-4" />
+                  <Image src="/assets/images/logo.png"  height={80} width={80} alt="logo"/>
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-semibold">Acme Inc</span>

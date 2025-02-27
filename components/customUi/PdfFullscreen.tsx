@@ -30,7 +30,7 @@ const PdfFullscreen = ({ fileUrl }: PdfFullscreenProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [numPages, setNumPages] = useState<number>();
   const [pageNumber, setPageNumber] = useState(1);
-  const [scale, setScale] = useState(0.6);
+  const [scale, setScale] = useState(0.8);
 
   const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
     setNumPages(numPages);
@@ -50,7 +50,7 @@ const PdfFullscreen = ({ fileUrl }: PdfFullscreenProps) => {
 
   const zoomIn = () => {
     setScale((scale) => Math.min(2, scale + 0.1));
-  };
+  };39
 
   const zoomOut = () => {
     setScale((scale) => Math.max(0.2, scale - 0.1));
@@ -149,7 +149,6 @@ const PdfFullscreen = ({ fileUrl }: PdfFullscreenProps) => {
             renderTextLayer={false}
             renderAnnotationLayer={false}
             className="max-w-full h-auto"
-            width={window.innerWidth * 0.8} // Adjust the width as needed
           />
         </Document>
       </DialogContent>

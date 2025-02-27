@@ -66,7 +66,7 @@ const UploadDropMe = () => {
                     key: res[0].key,
                     hash: res[0].fileHash,
                     userId: user.id,
-                    uploadStatus: "SUCCESS",
+                    uploadStatus: "PENDING",
                   });
 
                   console.log("res", res);
