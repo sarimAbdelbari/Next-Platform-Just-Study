@@ -300,7 +300,6 @@ const SidebarRail = React.forwardRef<
   React.ComponentProps<'button'>
 >(({ className, ...props }, ref) => {
   const { toggleSidebar } = useSidebar()
-
   return (
     <button
       ref={ref}

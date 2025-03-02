@@ -4,6 +4,7 @@ import {
   Command, 
   GalleryVerticalEnd, 
   LayoutDashboard, 
+  Users,
   CheckSquare as IconChecklist, 
   Package as IconPackages, 
   Settings as IconSettings, 
@@ -12,8 +13,11 @@ import {
   Palette as IconPalette, 
   Bell as IconNotification, 
   MonitorCheck as IconBrowserCheck, 
-  HelpCircle as IconHelp 
+  HelpCircle as IconHelp, 
+  FileJson2,
+  FileStack
 } from "lucide-react";
+
 
 export const data = {
   user: {
@@ -23,18 +27,18 @@ export const data = {
   },
   teams: [
     {
-      name: "Acme Inc",
-      logo: GalleryVerticalEnd,
+      name: "Chiali Inc",
+      logo: "/assets/images/logo.png",
       plan: "Enterprise",
     },
     {
-      name: "Acme Corp.",
-      logo: AudioWaveform,
+      name: "Chiali Corp.",
+      logo: "/assets/images/logo.png",
       plan: "Startup",
     },
     {
-      name: "Evil Corp.",
-      logo: Command,
+      name: "Chiali Acadm.",
+      logo: "/assets/images/logo.png",
       plan: "Free",
     },
   ],
@@ -44,18 +48,23 @@ export const data = {
       items: [
         {
           title: 'Dashboard',
-          url: '/',
+          url: '/dashboard',
           icon: LayoutDashboard,
         },
         {
           title: 'Users',
-          url: '/tasks',
-          icon: IconChecklist,
+          url: '/dashboard/users',
+          icon: Users,
+        },
+        {
+          title: 'Files',
+          url: '/dashboard/files',
+          icon: FileStack,
         },
         {
           title: 'Logs',
-          url: '/apps',
-          icon: IconPackages,
+          url: '/dashboard/logs',
+          icon: FileJson2,
         },
       ],
     },
