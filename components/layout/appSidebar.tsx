@@ -1,5 +1,5 @@
-import { NavUser } from "@/components/navUser";
-import { TeamSwitcher } from "@/components/layout/team-switcher";
+import { NavUser } from "@/components/layout/navUser";
+import { TeamSwitcher } from "@/components/layout/teamSwitcher";
 import {
   Sidebar,
   SidebarContent,
@@ -8,7 +8,7 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 import { auth } from "@/lib/auth";
-import AppNavBar from "@/components/layout/app-nav";
+import AppNavBar from "@/components/layout/appNav";
 
 export async function AppSidebar({
   ...props

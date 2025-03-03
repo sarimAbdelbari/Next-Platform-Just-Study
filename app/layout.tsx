@@ -3,10 +3,12 @@ import {  Inter } from "next/font/google";
 import "./globals.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { ThemeProvider } from "@/components/themeProvider"
+import { ThemeProvider } from "@/components/utils/themeProvider"
 import { cn } from "@/lib/utils";
 // import Navbar from "@/components/navbar";
 import { UserProvider } from "@/context/UserProvider";
+import { SearchProvider } from '@/context/search-context'
+
 const inter = Inter({ subsets : ['latin']})
 
 export const metadata: Metadata = {
@@ -33,7 +35,9 @@ export default function RootLayout({
 
          {/* <Navbar/> */}
          <UserProvider>
-        {children}
+         <SearchProvider>
+          {children}
+        </SearchProvider>
          </UserProvider>
         <ToastContainer />
           </ThemeProvider>

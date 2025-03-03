@@ -88,7 +88,7 @@ const SidebarMenuLink = ({ item }: { item: NavLink }) => {
       >
         <Link href={item.url} onClick={() => setOpenMobile(false)}>
           {item.icon && <item.icon />}
-          <span>{item.title}</span>
+          <span className="text-sm font-normal text-foreground">{item.title}</span>
           {item.badge && <NavBadge>{item.badge}</NavBadge>}
         </Link>
       </SidebarMenuButton>

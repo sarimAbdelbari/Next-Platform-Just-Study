@@ -14,11 +14,21 @@ import {
     SidebarProvider,
     SidebarTrigger,
   } from "@/components/ui/sidebar"
+import { ModeToggle } from '@/components/utils/modeToggle'
+import { Search } from '@/components/search'
 
 export default function Header() {
   return (
-    <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
-    <div className="flex items-center gap-2 px-4">
+    <header className="flex flex-col gap-4 justify-between items-start my-3 mx-4 shrink-0  transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-15">
+     <div className='flex justify-between items-center w-full'>
+        <Search/>
+    <div >
+      <ModeToggle />
+    </div>
+
+     </div>
+      
+    <div className="flex items-center gap-2">
       <SidebarTrigger className="-ml-1" />
       <Separator orientation="vertical" className="mr-2 h-4" />
       <Breadcrumb>

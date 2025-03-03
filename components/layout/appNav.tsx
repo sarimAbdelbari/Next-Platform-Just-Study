@@ -1,6 +1,6 @@
 "use client";
 import React from 'react'
-import { NavGroup } from "./nav-group";
+import { NavGroup } from "./navGroup";
 
 import { data } from "@/data";
 
@@ -14,7 +14,7 @@ const AppNavBar = () => {
             <NavGroup key={props.title} {...props} />
         ))
     ) : (
-        <div className="p-4 text-muted-foreground">Navigation not available</div>
+        <div className="p-4  text-muted-foreground">Navigation not available</div>
     )}
     </>
   )
