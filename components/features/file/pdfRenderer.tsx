@@ -13,8 +13,8 @@ import {
   Loader2,
 } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { errorToast } from "../utils/toastNotification";
-import PdfFullscreen from "@/components/customUi/PdfFullscreen";
+import { errorToast } from "@/components/utils/toastNotification";
+import PdfFullscreen from "@/components/features/file/pdfFullscreen";
 // Set up PDF.js worker
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 

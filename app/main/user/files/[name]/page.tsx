@@ -1,5 +1,5 @@
-import ChatWrapper from "@/components/customUi/chatWrapper";
-import PdfRenderer from "@/components/customUi/pdfRenderer";
+import ChatWrapper from "@/components/features/file/chatWrapper";
+import PdfRenderer from "@/components/features/file/pdfRenderer";
 import { auth } from "@/lib/auth";
 import { PrismaClient } from "@prisma/client";
 import { redirect, notFound } from "next/navigation";

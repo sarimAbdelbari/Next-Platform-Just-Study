@@ -3,7 +3,7 @@ import { Loader2, MessageSquare, Plus, Trash } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { format } from "date-fns";
-import ToastWrapper from "@/components/customUi/toastWrapper";
+import ToastWrapper from "@/components/layout/toastWrapper";
 import { deletefilebyId } from "@/lib/actions/fileActions";
 import { useState } from "react";
 

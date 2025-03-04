@@ -10,27 +10,32 @@ import {
   } from "@/components/ui/breadcrumb"
   import { Separator } from "@/components/ui/separator"
   import {
-    SidebarInset,
-    SidebarProvider,
     SidebarTrigger,
   } from "@/components/ui/sidebar"
 import { ModeToggle } from '@/components/utils/modeToggle'
 import { Search } from '@/components/search'
+import LogoutBtn from '@/components/auth/logoutBtn'
 
 export default function Header() {
+
   return (
-    <header className="flex flex-col gap-4 justify-between items-start my-3 mx-4 shrink-0  transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-15">
+    <header className="flex flex-col gap-7 justify-between items-start  shrink-0  transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-15">
      <div className='flex justify-between items-center w-full'>
+      <div className='flex gap-1 justify-start items-center'>
+
+      <SidebarTrigger className="-ml-1" />
+      <Separator orientation="vertical" className="mr-2 h-4" />
         <Search/>
-    <div >
+      </div>
+    <div className='flex gap-3 items-center' >
       <ModeToggle />
+      <LogoutBtn/>
     </div>
 
      </div>
       
     <div className="flex items-center gap-2">
-      <SidebarTrigger className="-ml-1" />
-      <Separator orientation="vertical" className="mr-2 h-4" />
+      
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem className="hidden md:block">

@@ -2,9 +2,9 @@ import { auth } from "@/lib/auth";
 import { SkeletonCard } from "@/components/ui/skeletonCard";
 import { redirect } from "next/navigation";
 import { getFilesByUserId } from "@/lib/actions/fileActions";
-import ToastWrapper from "@/components/customUi/toastWrapper";
+import ToastWrapper from "@/components/layout/toastWrapper";
 import { Ghost } from "lucide-react";
-import FileBox from "@/components/customUi/fileBox";
+import FileBox from "@/components/features/file/fileBox";
 
 interface File {
   id: string;
